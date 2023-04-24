@@ -9,4 +9,14 @@ class Fruit extends Model
 {
     use HasFactory;
     protected $fillable = ['name', 'color', 'price'];
+
+    public function insert() {
+        $fruit = new Fruit();
+    
+        $fruit->name = 'grape';
+        $fruit->color = 'blue';
+        $fruit->price = 320;
+    
+        $fruit->save();
+    }
 }
