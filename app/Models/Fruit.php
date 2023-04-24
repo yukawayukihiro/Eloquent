@@ -19,4 +19,12 @@ class Fruit extends Model
     
         $fruit->save();
     }
+
+    public function create () {
+        Fruit::create([
+            'name' => 'apple',
+            'color' => 'red',
+            'price' => 100,
+        ]);
+    }
 }
